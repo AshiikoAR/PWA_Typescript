@@ -13,6 +13,7 @@ const App: React.FC = () => {
   }, []);
 
   const takePhoto = async () => {
+    console.log('takePhoto function called');
     console.log('Photo en cours...');
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -41,6 +42,7 @@ const App: React.FC = () => {
   };
 
   const getLocation = () => {
+    console.log('getLocation function called');
     console.log('Récupération de la localisation...');
     navigator.geolocation.getCurrentPosition(
       async (position) => {
